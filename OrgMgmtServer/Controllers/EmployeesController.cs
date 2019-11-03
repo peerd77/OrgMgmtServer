@@ -26,6 +26,13 @@ namespace OrgMgmtServer.Controllers
             return Ok(Imdb.Imdb.GetEmployeeById(id));
         }
 
+        // GET api/<controller>/5
+        [HttpGet("Manager/{id}")]
+        public IActionResult GetManager(int id)
+        {
+            return Ok(Imdb.Imdb.GetManagerByEmp(id));
+        }
+
         // POST api/<controller>
         [HttpPost]
         public void Post([FromBody]string value)
