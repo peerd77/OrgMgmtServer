@@ -8,6 +8,8 @@ namespace OrgMgmtServer.Models
     public class Employee: Person
     {
         public EmployeePosition position;
+        public int? ManagerID { get; set; }
+
     }
 
     public enum EmployeePosition { FrontEnd, Backend, FullStack, TeamLead, QA, Designer, Product, CTO, COO, CEO }

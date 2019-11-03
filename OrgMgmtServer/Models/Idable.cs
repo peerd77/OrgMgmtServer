@@ -7,6 +7,6 @@ namespace OrgMgmtServer.Models
 {
     public abstract class Idable
     {
-        public string id;
+        public int Id { get; set; }
     }
 }

@@ -5,9 +5,15 @@ using System.Threading.Tasks;
 
 namespace OrgMgmtServer.Models
 {
-    public class DatedEntity
+    public abstract class DatedEntity : Idable
     {
+        public DatedEntity()
+        {
+            CreateDate = DateTime.Now;
+        }
         public string text;
-        public DateTime createDate;
+        public DateTime CreateDate { get; private set; }   
+
+
     }
 }

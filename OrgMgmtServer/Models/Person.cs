@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace OrgMgmtServer.Models
 {
-    public class Person: Idable
+    public abstract class Person: Idable
     {
-        public string firstName;
-        public string lastName;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
