@@ -7,6 +7,6 @@ namespace OrgMgmtServer.Models
 {
     public class Report: DatedEntity
     {
-        public string EmployeeID { get; set; }
+        public string EmployeeId { get; set; }
     }
 }
