@@ -17,13 +17,15 @@ namespace OrgMgmtServer.Imdb
                     FirstName = "Refael",
                     LastName = "Ganesh",
                     ManagerID = 4,
+                    Position = EmployeePosition.CTO
                 },
                 new Employee()
                 {
                     Id = 2,
                     FirstName = "Dan",
                     LastName = "Peer",
-                    ManagerID = 1
+                    ManagerID = 1,
+                    Position = EmployeePosition.Backend
                 },
                 new Employee()
                 {
@@ -31,6 +33,7 @@ namespace OrgMgmtServer.Imdb
                     FirstName = "Ori",
                     LastName = "Kadori",
                     ManagerID = 1,
+                    Position = EmployeePosition.FrontEnd
                 },
                 new Employee()
                 {
@@ -38,6 +41,7 @@ namespace OrgMgmtServer.Imdb
                     FirstName = "David",
                     LastName = "Ben David",
                     ManagerID = null,
+                    Position = EmployeePosition.CEO
                 },
             };
 
