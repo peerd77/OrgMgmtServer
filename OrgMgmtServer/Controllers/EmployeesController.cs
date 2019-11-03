@@ -39,6 +39,14 @@ namespace OrgMgmtServer.Controllers
         {
             return Ok(Imdb.Imdb.GetTasksByEmpId(id));
         }
+        
+        // GET api/<controller>/5
+        [HttpGet("GetSubordinates/{id}")]
+        public IActionResult GetSubordinates(int id)
+        {
+            return Ok(Imdb.Imdb.GetEmpByManager(id));
+        }
+
 
         // POST api/<controller>
         [HttpPost]
