@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace OrgMgmtServer.Controllers
 {
     [Route("api/[controller]")]
-    public class EmployeeController : Controller
+    public class EmployeesController : Controller
     {
         // GET: api/<controller>
         [HttpGet]
@@ -19,12 +19,11 @@ namespace OrgMgmtServer.Controllers
         }
 
 
-
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            return Ok(Imdb.Imdb.GetEmployeeById(id));
         }
 
         // POST api/<controller>

@@ -12,6 +12,6 @@ namespace OrgMgmtServer.Models
 
     }
 
-    public enum EmployeePosition { FrontEnd, Backend, FullStack, TeamLead, QA, Designer, Product, CTO, COO, CEO }
+    public enum EmployeePosition { FrontEnd = 1, Backend, FullStack, TeamLead, QA, Designer, Product, CTO, COO, CEO }
   
 }

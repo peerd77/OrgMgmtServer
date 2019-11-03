@@ -14,8 +14,8 @@ namespace OrgMgmtServer.Imdb
                 new Employee()
                 {
                     Id = 1,
-                    FirstName = "Refael",
-                    LastName = "Ganesh",
+                    FirstName = "Moshe",
+                    LastName = "Perez",
                     ManagerID = 4,
                     Position = EmployeePosition.CTO
                 },
@@ -60,6 +60,8 @@ namespace OrgMgmtServer.Imdb
 
         public static List<Employee> GetAllEmployees()
             => Employees;
+        public static Employee GetEmployeeById(int empId)
+            => Employees.Where(x => x.Id == empId).FirstOrDefault();
 
         public static List<Employee> GetEmpByManager(int? managerID)
           => Employees.Where(x => x.ManagerID == managerID).ToList();
