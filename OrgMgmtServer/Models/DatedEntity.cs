@@ -11,7 +11,7 @@ namespace OrgMgmtServer.Models
         {
             CreateDate = DateTime.Now;
         }
-        public string text;
+        public string Text { get; set; }
         public DateTime CreateDate { get; private set; }   
 
 

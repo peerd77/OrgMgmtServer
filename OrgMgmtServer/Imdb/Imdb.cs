@@ -52,7 +52,13 @@ namespace OrgMgmtServer.Imdb
 
             Tasks = new List<Task>()
             {
-
+                new Task()
+                {
+                    Id = 1,
+                    DueDate = new DateTime(),
+                    EmployeeId = 1,
+                    Text = "Go to sleep!",
+                }
             };
 
 
