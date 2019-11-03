@@ -8,7 +8,7 @@ namespace OrgMgmtServer.Models
     public class Employee: Person
     {
         public EmployeePosition Position { get; set; }
-        public int? ManagerID { get; set; }
+        public int? ManagerId { get; set; }
 
     }
 

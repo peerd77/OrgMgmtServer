@@ -16,7 +16,7 @@ namespace OrgMgmtServer.Imdb
                     Id = 1,
                     FirstName = "Moshe",
                     LastName = "Perez",
-                    ManagerID = 4,
+                    ManagerId = 4,
                     Position = EmployeePosition.CTO
                 },
                 new Employee()
@@ -24,7 +24,7 @@ namespace OrgMgmtServer.Imdb
                     Id = 2,
                     FirstName = "Dan",
                     LastName = "Peer",
-                    ManagerID = 1,
+                    ManagerId = 1,
                     Position = EmployeePosition.Backend
                 },
                 new Employee()
@@ -32,7 +32,7 @@ namespace OrgMgmtServer.Imdb
                     Id = 3,
                     FirstName = "Ori",
                     LastName = "Kadori",
-                    ManagerID = 1,
+                    ManagerId = 1,
                     Position = EmployeePosition.FrontEnd
                 },
                 new Employee()
@@ -40,7 +40,7 @@ namespace OrgMgmtServer.Imdb
                     Id = 4,
                     FirstName = "David",
                     LastName = "Ben David",
-                    ManagerID = null,
+                    ManagerId = null,
                     Position = EmployeePosition.CEO
                 },
             };
@@ -63,11 +63,11 @@ namespace OrgMgmtServer.Imdb
         public static Employee GetEmployeeById(int empId)
             => Employees.Where(x => x.Id == empId).FirstOrDefault();
 
-        public static List<Employee> GetEmpByManager(int? managerID)
-          => Employees.Where(x => x.ManagerID == managerID).ToList();
+        public static List<Employee> GetEmpByManager(int? managerId)
+          => Employees.Where(x => x.ManagerId == managerId).ToList();
 
-        public static Employee GetManagerByEmp(int empID)
-        => Employees.Where(x => x.Id == (Employees.Where(e => e.Id == empID)?.FirstOrDefault()?.ManagerID)).FirstOrDefault();
+        public static Employee GetManagerByEmp(int empId)
+        => Employees.Where(x => x.Id == (Employees.Where(e => e.Id == empId)?.FirstOrDefault()?.ManagerId)).FirstOrDefault();
 
         public static int CreateTask(Task model)
         {
@@ -79,7 +79,7 @@ namespace OrgMgmtServer.Imdb
         }
 
         public static List<Task> GetTasksByEmpId(int empId)
-            => Tasks.Where(t => t.EmployeeID == empId).ToList();
+            => Tasks.Where(t => t.EmployeeId == empId).ToList();
 
 
         public static List<Employee> Employees { get; set; }

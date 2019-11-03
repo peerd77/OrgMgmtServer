@@ -8,6 +8,6 @@ namespace OrgMgmtServer.Models
     public class Task : DatedEntity
     {
         public DateTime DueDate { get; set; }
-        public int EmployeeID { get; set; }
+        public int EmployeeId { get; set; }
     }
 }
