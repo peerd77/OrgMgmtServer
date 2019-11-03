@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OrgMgmtServer.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(Imdb.Imdb.GetAllEmployees());
         }
 
         // GET api/<controller>/5
