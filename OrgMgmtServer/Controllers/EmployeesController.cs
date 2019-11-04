@@ -57,6 +57,14 @@ namespace OrgMgmtServer.Controllers
 
         // POST api/<controller>
         [HttpPost]
+        [Route("CreateTask")]
+        public IActionResult CreateTask([FromBody] Models.Task taskModel)
+        {
+            return Ok(Imdb.Imdb.CreateTask(taskModel));
+        }
+
+        // POST api/<controller>
+        [HttpPost]
         public void Post([FromBody]string value)
         {
         }
