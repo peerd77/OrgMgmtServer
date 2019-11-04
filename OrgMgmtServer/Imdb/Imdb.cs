@@ -57,7 +57,7 @@ namespace OrgMgmtServer.Imdb
                     Id = 1,
                     DueDate = new DateTime(),
                     EmployeeId = 1,
-                    Text = "Go to sleep!",
+                    Text = "First task",
                 }
             };
 
@@ -80,6 +80,18 @@ namespace OrgMgmtServer.Imdb
             model.Id = Tasks.Max(x => x.Id) + 1;
 
             Tasks.Add(model);
+
+            return model.Id;
+        }
+
+        public static int CreateReport(Report model)
+        {
+            if (Reports.Count() == 0)
+                model.Id = 1;
+            else
+                model.Id = Reports.Max(x => x.Id) + 1;
+
+            Reports.Add(model);
 
             return model.Id;
         }

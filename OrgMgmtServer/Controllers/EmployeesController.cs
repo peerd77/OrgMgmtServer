@@ -50,9 +50,9 @@ namespace OrgMgmtServer.Controllers
         // POST api/<controller>
         [HttpPost]
         [Route("CreateReport")]
-        public IActionResult CreateReport(string managerId, string employeeId, string text)
+        public IActionResult CreateReport([FromBody] Models.Report reportModel)
         {
-            return Ok();
+            return Ok(Imdb.Imdb.CreateReport(reportModel));
         }
 
         // POST api/<controller>
