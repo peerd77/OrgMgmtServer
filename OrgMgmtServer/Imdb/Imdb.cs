@@ -77,7 +77,10 @@ namespace OrgMgmtServer.Imdb
 
         public static int CreateTask(Task model)
         {
-            model.Id = Tasks.Max(x => x.Id) + 1;
+            if (Tasks.Count() == 0)
+                model.Id = 1;
+            else
+                model.Id = Tasks.Max(x => x.Id) + 1;
 
             Tasks.Add(model);
 
