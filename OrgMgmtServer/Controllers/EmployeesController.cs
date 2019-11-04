@@ -47,6 +47,13 @@ namespace OrgMgmtServer.Controllers
             return Ok(Imdb.Imdb.GetEmpByManager(id));
         }
 
+        // POST api/<controller>
+        [HttpPost]
+        [Route("CreateReport")]
+        public IActionResult CreateReport(string managerId, string employeeId, string text)
+        {
+            return Ok();
+        }
 
         // POST api/<controller>
         [HttpPost]
